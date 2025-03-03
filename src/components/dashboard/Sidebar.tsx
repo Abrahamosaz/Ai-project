@@ -1,13 +1,12 @@
 "use client";
 
 import { sideBars } from "@/app/constants";
-import { useGetDashboardContext } from "@/app/hooks/useContext";
+import { useDashboardStore } from "@/store/dashboard.store";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import classNames from "classnames";
 
 const SideBar = () => {
-  const { isSideBarShrink, setIsNavOpen } = useGetDashboardContext();
+  const { isSideBarShrink, setIsNavOpen } = useDashboardStore();
   const pathname = usePathname();
 
   return (

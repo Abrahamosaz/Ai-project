@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
 import SearchInput from "../SearchInput";
 import { IoIosAdd } from "react-icons/io";
 

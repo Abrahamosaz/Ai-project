@@ -3,22 +3,20 @@
 import { useState, useLayoutEffect } from "react";
 
 export const useWindowSize = () => {
-  // Initialize with undefined to avoid hydration mismatch
-  const [width, setWidth] = useState<number>(window.innerWidth);
+  // Initialize with `undefined` to avoid hydration mismatch
+  const [width, setWidth] = useState<number | undefined>(undefined);
 
   useLayoutEffect(() => {
-    // Update width only after component mounts on client
-    setWidth(window.innerWidth);
-
+    // Ensure `window` is available only on the client side
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
 
-    window.addEventListener("resize", handleResize);
+    // Set initial width
+    handleResize();
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return width;

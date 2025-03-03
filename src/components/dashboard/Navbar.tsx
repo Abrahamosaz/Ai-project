@@ -1,23 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
-
 import { MdMenu } from "react-icons/md";
 import { BsPersonCircle } from "react-icons/bs";
-import { useGetDashboardContext } from "@/app/hooks/useContext";
 import { useWindowSize } from "@/app/hooks/useWindowSize";
+import { useDashboardStore } from "@/store/dashboard.store";
 
 const Navbar = () => {
   const { isSideBarShrink, setIsSideBarShrink, isNavOpen, setIsNavOpen } =
-    useGetDashboardContext();
+    useDashboardStore();
 
   const width = useWindowSize();
 
   return (
-    <div className="bg-primary py-5 w-full z-10">
+    <div className="bg-primary py-5 max-sm:px-4 w-full z-10">
       {/* left  section */}
 
-      <div className="container w-full flex items-center justify-between">
+      <div className="container mx-auto w-full flex items-center justify-between">
         <div className="flex items-center gap-4">
           {width! > 768 ? (
             <MdMenu

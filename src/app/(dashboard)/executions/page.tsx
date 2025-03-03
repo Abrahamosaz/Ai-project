@@ -1,11 +1,8 @@
 "use client";
 
 import SearchBar from "@/components/dashboard/SearchBar";
-import React, { useState } from "react";
 
 const ExecutionsPage = () => {
-  const [search, setSearch] = useState("");
-
   return (
     <div className="w-full flex flex-col">
       <SearchBar title="Executions" />

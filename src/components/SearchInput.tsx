@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import { useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 
 interface SearchInputProps {

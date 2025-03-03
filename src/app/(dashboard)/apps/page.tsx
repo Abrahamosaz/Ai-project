@@ -26,7 +26,7 @@ const AppsPages = () => {
             <IoIosAdd className="text-white w-6 h-6 cursor-pointer" />
           </div>
 
-          <p>You don't have any connections yet</p>
+          <p>You don&#39;t have any connections yet</p>
         </div>
       </div>
     </div>

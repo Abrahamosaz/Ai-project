@@ -7,7 +7,7 @@
 } */
 
 .container {
-  @apply mx-auto max-w-[90%] sm:max-w-[96%];
+  @apply mx-auto max-w-[98%] sm:max-w-[96%];
 }
 
 * {
